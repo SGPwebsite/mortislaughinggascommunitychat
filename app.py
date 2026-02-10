@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect
 import datetime
 
-app = Flask(__Mortis Community Web__)
+app = Flask(__name__)
 messages = []
 
 @app.route('/')
@@ -16,6 +16,7 @@ def send():
     messages.append({'username': username, 'message': message, 'time': timestamp})
     return redirect('/')
 
-if __Mortis Community Web__ == '__main__':
+if __name__ == '__main__':
     app.run(debug=True)
 ```
+
